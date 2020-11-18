@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <Link to={'/'}>Home!</Link>
+        <Link to={'/'}>AniShowList!</Link>
       </div>
       <div className="links">
         <ul>
@@ -14,9 +14,13 @@ const Header = (props) => {
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
               <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
+              <li><Link to={'/favorites'}>Favorites</Link></li>
+              <li><Link to={'/watching-list'}>Watching List</Link></li>
             </>
           :
             <>
+              <li><Link to={'/favorites'}>Favorites</Link></li>
+              <li><Link to={'/watching-list'}>Watching List</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
             </>
