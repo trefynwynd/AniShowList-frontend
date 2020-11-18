@@ -5,6 +5,8 @@ import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
+import Favorites from '../pages/Favorites'
+import Watching from '../pages/Watching'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -26,6 +28,8 @@ const Routes = (props) => (
                 storeUser={ props.storeUser }
               />
     } } />
+    <Route path='/favorites' component={ Favorites } />
+    <Route path='/watching' component={ Watching } />
     <PrivateRoute path='/profile' component={ Profile } currentUser={ props.currentUser } />
   </Switch>
 )
