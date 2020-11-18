@@ -1,12 +1,15 @@
 header {
-  background-color: slategrey;
+  background-image: linear-gradient(crimson, navy, green);
   text-align: left;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
 
   a {
-    color: #fff;
+    color: black;
+    background-color: lightgreen;
+    padding: 1px 5px;
+    border-radius: 4px;
     transition: color 0.3s ease;
 
     &:hover {
