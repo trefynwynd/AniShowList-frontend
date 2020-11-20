@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
+
 const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <Link to={'/'}>AniShowList!</Link>
+        <Link to={'/'}>ASL</Link>
       </div>
       <div className="links">
         <ul>
