@@ -5,7 +5,7 @@ import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
-import Favorite from '../pages/Favorites'
+import Favorites from '../pages/Favorites'
 import WatchingList from '../pages/WatchingList'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -19,7 +19,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={ Home } />
-    <Route path='/favorites' component={ Favorite } />
+    <Route path='/favorites' component={ Favorites } />
     <Route path='/watching-list' component={ WatchingList } />
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {
