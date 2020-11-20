@@ -1,0 +1,61 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.home-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    object-fit: contain;
+}
+
+.search-primary {
+    height: 50px;
+    width: 50vh;
+    opacity: 0.4;
+}
+
+.welcome-text{
+    color: white;
+}
+
+.welcome-text > h1 {
+    font-size: 80px;
+}
+
+.welcome-text > button {
+    height: 45px;
+}
+
+@media screen and (max-width: 960px) {
+    .welcome-text > h1 {
+        font-size: 80px;
+    }
+
+    .welcome-text > p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .welcome-text > h1 {
+        font-size: 50px;
+    }
+
+    .search-primary {
+        width: 35vh;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
