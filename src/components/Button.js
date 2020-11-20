@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Button.scss';
 
 const STYLES = ['btn--primary', 'btn--secondary'];
@@ -16,7 +17,7 @@ export const Button = ({
     const checkButtonSize = SIZE.includes(buttonSize) ? buttonSize : Sizes[0]
 
     return(
-        <LINK to='/' className='btn-mobile'>
+        <Link to='/' className='btn-mobile'>
             <button
             className={`btn ${checkButtonStyle} ${checkButtonSize}`}
             onClick={onClick}
@@ -24,6 +25,6 @@ export const Button = ({
             >
                 { children }
             </button>
-        </LINK>
+        </Link>
     )
 }
