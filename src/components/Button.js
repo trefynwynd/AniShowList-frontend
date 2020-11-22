@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Button.scss';
-import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--secondary'];
 

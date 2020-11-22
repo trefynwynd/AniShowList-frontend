@@ -14,14 +14,12 @@ const Header = (props) => {
           { props.currentUser ? 
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
-              <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
+              <li><Link to={'/watch-list'}>Watch List</Link></li>
               <li><Link to={'/favorites'}>Favorites</Link></li>
-              <li><Link to={'/watching-list'}>Watching List</Link></li>
+              <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
             </>
           :
             <>
-              <li><Link to={'/favorites'}>Favorites</Link></li>
-              <li><Link to={'/watching-list'}>Watching List</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
             </>
