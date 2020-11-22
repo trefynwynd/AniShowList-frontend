@@ -10,8 +10,8 @@ const Home = () => {
         <div className='welcome-text'>
           <h1>AnimeShowList</h1>
           <p>"People die if they are killed! - Shirou Emiya, Fate/Stay Night"</p>
-          <input type="text" placeholder="Search..." className="search-primary"/>
-          <button>Ikuzo!</button>
+          {/* <input type="text" placeholder="Search..." className="search-primary"/>
+          <button>Ikuzo!</button> */}
         </div>
     </div>
 )
