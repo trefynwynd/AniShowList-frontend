@@ -4,9 +4,9 @@ function About() {
   return (
     <div>
     <h1>About This Project</h1>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>People</p>
+      <p>Tech</p>
+      <p>Thanks</p>
     </div>
   )
 }
