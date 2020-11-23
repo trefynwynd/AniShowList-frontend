@@ -5,6 +5,7 @@ const SearchItem = ({ search }) => {
     return (
         <div className='img-container'>
             <img src={search.image_url} alt=""/>
+            <p className='img-title'>{search.title}</p>
         </div>
     )}
 

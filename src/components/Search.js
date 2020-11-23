@@ -10,7 +10,7 @@ const Search = ({ getQuery }) => {
 
     return (
         <section className='search'>
-            <form>
+            <form className="form-search-bar">
                 <input 
                 type='text' 
                 className='search-primary' 
