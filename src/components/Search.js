@@ -1,7 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 
-const Search = () => {
-    const [ shows, setshows ] = useState([])
-    const [ isLoading, setIsLoading ] = useState()
+const Search = ({ getQuery }) => {
+    const [text, setText] = useState('')
+    
+    const onChange = (q) => {
+        setText(q)
+        getQuery(q)
+    }
+
+    return (
+        <section className='search'>
+            <form>
+                <input 
+                type='text' 
+                className='search-primary' 
+                placeholder='Search...'
+                value={text}
+                onChange={(e) => onChange(e.target.value)}
+                />
+                <button>Ikuzo!</button>
+            </form>
+
+        </section>
+    )
 }
+
+export default Search
