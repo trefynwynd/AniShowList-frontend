@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
-  background-color: #242424;
+  background-color: transparent;
   padding: 30px 12px;
 }
 
