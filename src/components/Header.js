@@ -2,17 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
+
 const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <Link to={'/'}>Home!</Link>
+        <Link to={'/'}>ASL</Link>
       </div>
       <div className="links">
         <ul>
           { props.currentUser ? 
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
+              <li><Link to={'/watch-list'}>Watch List</Link></li>
+              <li><Link to={'/favorites'}>Favorites</Link></li>
               <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
             </>
           :
