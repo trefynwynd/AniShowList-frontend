@@ -10,3 +10,6 @@ function Trending() {
 }
 
 export default Trending
+
+// No search functionality needed
+// Displays the top 20-50 shows that are trending
