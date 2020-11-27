@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SearchItem from './SearchItem'
+import Search from './Search';
 
 const Background = styled.div`
     width: 100%;
@@ -61,7 +62,7 @@ const CloseModalButton = styled(MdClose)`
 `
 
 
-const Modal = ({ search, showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal }) => {
 
     return (
         <>
@@ -71,6 +72,7 @@ const Modal = ({ search, showModal, setShowModal }) => {
                         <ModalContent>
                         <buttton><FavoriteIcon fontSize="large" /></buttton>
                         </ModalContent>
+                        {Search}
                         <CloseModalButton
                             aria-label='Close modal'
                             onClick={() => setShowModal(prev => !prev)}
