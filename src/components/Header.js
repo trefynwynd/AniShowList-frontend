@@ -16,7 +16,7 @@ const Header = (props) => {
               <li><Link to={'/profile'}>Profile</Link></li>
               <li><Link to={'/favorites'}>Favorites</Link></li>
               <li><Link to={'/trending'}>Trending</Link></li>
-              <li><Link to={'/watching-list'}>Watching List</Link></li>
+              <li><Link to={'/watch-list'}>Watch List</Link></li>
               <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
             </>
           :

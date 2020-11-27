@@ -11,10 +11,10 @@ ReactDOM.render(
   // StrictMode does not render any visible UI. 
   // It activates additional checks and warnings for 
   // its descendants.
-  <React.StrictMode>
+  <>
     <Router>  
       <App />
     </Router>
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 );
