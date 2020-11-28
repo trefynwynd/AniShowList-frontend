@@ -73,45 +73,45 @@ video {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     padding: 15px;
-  }
-  
-  
-  .cards {
+}
+
+
+.cards {
     display: inline-grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5rem;
     background-color: transparent;
     padding: 105px;
-  }
-  
-  .img-container {
+}
+
+.img-container {
     cursor: pointer;
     background-color: transparent;
     height: 403px;
     perspective: 1000px;
-  }
-  
-  .img-container img {
+}
+
+.img-container img {
     width: 261px;
     height: 372px;
     object-fit: none;
-  }
-  
-  .form-search-bar {
+}
+
+.form-search-bar {
     padding: 10px;
-  }
-  
-  .card-img, .card-img-top {
+}
+
+.card-img, .card-img-top {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
     height: 250px;
     width: 315px;
-  }
-  
-  .img-title {
+}
+
+.img-title {
     /* margin-bottom: -3rem; */
     padding: 0px;
     color: white;
     display: inline;
     font-size: 16px;
-  }
+}

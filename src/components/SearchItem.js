@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { GlobalStyle } from './globalStyles'
 import { Link } from 'react-router-dom'
+import Details from './Details'
 
 
 const SearchItem = ({ search }) => {
-    console.log(search)
-
-
 
     return (
-        <div className='img-container' >
-            <img src={search.image_url} alt=""/>
+        <div className='img-container'>
+        <Link to={`/show/${ search.mal_id }`}>
+            <img src={search.image_url} alt="" />
+        </Link>
+        
         </div>
     )
 }
