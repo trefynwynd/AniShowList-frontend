@@ -7,6 +7,7 @@ import Login from '../pages/Login'
 import Profile from '../pages/Profile'
 import Favorites from '../pages/Favorites'
 import WatchList from '../pages/WatchList'
+import ShowDetail from '../pages/ShowDetail'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -21,6 +22,7 @@ const Routes = (props) => (
     <Route exact path='/' component={ Home } />
     <Route path='/favorites' component={ Favorites } />
     <Route path='/watch-list' component={ WatchList } />
+    <Route path='/show/:id' component={ ShowDetail } />
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
