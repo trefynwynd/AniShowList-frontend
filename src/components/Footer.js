@@ -1,7 +1,13 @@
 import React from 'react';
+import './Footer.css';
+import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
-  return <p>Footer Here!</p>
+function Footer() {
+    return (
+        <div>
+        </div>
+    );
 }
 
-export default Footer;
+export default Footer
