@@ -11,6 +11,10 @@ import WatchingList from '../pages/WatchingList'
 import Trending from '../pages/Trending'
 =======
 import WatchList from '../pages/WatchList'
+<<<<<<< HEAD
+>>>>>>> submain
+=======
+import ShowDetail from '../pages/ShowDetail'
 >>>>>>> submain
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -30,6 +34,10 @@ const Routes = (props) => (
     <Route path='/watching-list' component={ WatchingList } />
 =======
     <Route path='/watch-list' component={ WatchList } />
+<<<<<<< HEAD
+>>>>>>> submain
+=======
+    <Route path='/show/:id' component={ ShowDetail } />
 >>>>>>> submain
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {

@@ -1,4 +1,4 @@
-import React from 'react'
+{/* import React from 'react'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -84,4 +84,4 @@ const Modal = ({ showModal, setShowModal }) => {
     )
 }
 
-export default Modal
+export default Modal */}
