@@ -18,7 +18,7 @@ const Search = ({ getQuery }) => {
                 value={text}
                 onChange={(e) => onChange(e.target.value)}
                 />
-                <button>Ikuzo!</button>
+                {/* <button>Ikuzo!</button> */}
             </form>
 
         </section>

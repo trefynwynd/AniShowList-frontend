@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import Details from '../components/Details'
-import Search from '../components/Search'
 
 const ShowDetail = () => {
 
@@ -20,13 +18,20 @@ const ShowDetail = () => {
         }
 
         selectedShow()
-    }, [])
+    }, [id])
 
     return (
-        <div>
+        <div className="show-title">
             <h1>{show.title}</h1>
-            <img src={show.image_url} alt=""/>
-            <p>{show.synopsis}</p>
+            <button>Add to Watchlist</button>
+                <button>Add to Favorites</button>
+            <div className="show-image">
+                <img src={show.image_url} alt="" /><br /><br />
+                <div className="show-synopsis">
+                <p className="synop-p">SYNOPSIS</p>
+                <p>{show.synopsis}</p>
+                </div>
+            </div>
         </div>
     )
 }
