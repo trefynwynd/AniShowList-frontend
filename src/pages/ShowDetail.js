@@ -23,13 +23,13 @@ const ShowDetail = () => {
     return (
         <div className="show-title">
             <h1>{show.title}</h1>
-            <button>Add to Watchlist</button>
-                <button>Add to Favorites</button>
+            <button><a href='/watch-list'>Add to Watchlist</a></button>
+            <button><a href='/favorites'>Add to Favorites</a></button>
             <div className="show-image">
                 <img src={show.image_url} alt="" /><br /><br />
                 <div className="show-synopsis">
-                <p className="synop-p">SYNOPSIS</p>
-                <p>{show.synopsis}</p>
+                    <p className="synop-p">SYNOPSIS</p>
+                    <p>{show.synopsis}</p>
                 </div>
             </div>
         </div>

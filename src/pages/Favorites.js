@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Favorites extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +23,7 @@ class Favorites extends Component {
     render() {
         return (
             <div className="faves-div"> 
-                <h1>{this.state.favorites}</h1><br/>
+                <h1>Favorites</h1><br/>
             </div >
         )
     }

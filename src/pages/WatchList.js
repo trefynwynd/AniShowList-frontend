@@ -20,7 +20,7 @@ class WatchList extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.watchList}</h1>
+                <h1>WatchList</h1>
             </div>
         );
     }
