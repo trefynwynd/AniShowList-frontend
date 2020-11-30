@@ -21,7 +21,7 @@ const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={ Home } />
     <Route path='/favorites' component={ Favorites } />
-    <Route path='/watch-list' component={ WatchList } />
+    <Route path='/watchlist' component={ WatchList } />
     <Route path='/show/:id' component={ ShowDetail } />
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {

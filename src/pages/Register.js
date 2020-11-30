@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import UserModel from '../models/user'
-
 const Register = props => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
   const handleName = e => {
     setName(e.target.value)
   }  
@@ -19,10 +17,8 @@ const Register = props => {
   const handleConfirmPassword = e => {
     setConfirmPassword(e.target.value)
   }
-
   const handleSubmit = e => {
     e.preventDefault()
-
     if (password === confirmPassword) {
       UserModel.create({ name, email, password })
         .then(data => {
@@ -32,7 +28,6 @@ const Register = props => {
         })
     }
   }
-
   return (
     <div>
       <h4>Register</h4>
@@ -86,5 +81,4 @@ const Register = props => {
     </div>
   )
 }
-
 export default Register;
