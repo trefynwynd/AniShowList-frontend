@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import Routes from './config/Routes'
 import './App.css'
 import UserModel from './models/user'
-// import Home from './pages/Home'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
