@@ -1,7 +1,9 @@
 const url = `http://localhost:4000/api/v1`
+
+
 class userShow {
     // accessed as GameModel.all()
-    static allFavcs = () => {
+    static allFaves = () => {
         // calling the index method in the API controller for favorites
         return fetch(`${url}/favorites`).then(res => res.json())
     }
