@@ -6,16 +6,8 @@ import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
 import Favorites from '../pages/Favorites'
-<<<<<<< HEAD
-import WatchingList from '../pages/WatchingList'
-import Trending from '../pages/Trending'
-=======
 import WatchList from '../pages/WatchList'
-<<<<<<< HEAD
->>>>>>> submain
-=======
 import ShowDetail from '../pages/ShowDetail'
->>>>>>> submain
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -29,16 +21,8 @@ const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={ Home } />
     <Route path='/favorites' component={ Favorites } />
-<<<<<<< HEAD
-    <Route path='/trending' component={ Trending } />
-    <Route path='/watching-list' component={ WatchingList } />
-=======
-    <Route path='/watch-list' component={ WatchList } />
-<<<<<<< HEAD
->>>>>>> submain
-=======
+    <Route path='/watchlist' component={ WatchList } />
     <Route path='/show/:id' component={ ShowDetail } />
->>>>>>> submain
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
