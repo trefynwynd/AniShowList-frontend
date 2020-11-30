@@ -1,5 +1,6 @@
 import React from 'react';
-import './Footer.css';
+import { List, Item } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import './footer.css'
 
