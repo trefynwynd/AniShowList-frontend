@@ -34,13 +34,15 @@ const ShowDetail = () => {
     //     }
     // }
 
-    handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         // to prevent default form functionality
         event.preventDefault()
-        usershow.create(this.state)
+        console.log(show.mal_id)
+        usershow.create(show.mal_id)
             .then(data => {
                 // redirecting with react router
-                this.props.history.push('/favorites')
+                console.log(data)
+                // this.props.history.push('/favorites')
             })
     }
 
@@ -49,7 +51,7 @@ const ShowDetail = () => {
             <h1>{show.title}</h1>
             <button>Add to Watchlist</button>
             {/* <button onClick={() => favShow(show.mal_id)}>Add to Favorites</button> */}
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={handleSubmit} >
                 <input type="hidden" name="apiId" value="{show.mal_id}" />
                 <button>add to favs</button>
             </form>
