@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import usershow from '../models/usershow'
 
 const ShowDetail = () => {
-//class ShowDetail extends Component {
 
-    let { id } = useParams()
+    const { id } = useParams()
     //console.log(id)
     const [show, setShow] = useState('')
 
@@ -16,43 +14,17 @@ const ShowDetail = () => {
                 `https://api.jikan.moe/v3/anime/${id}`
             )
             setShow(result.data)
-            //console.log(result.data)
+            console.log(result.data)
         }
+
         selectedShow()
     }, [id])
 
-    // const favShow = async id => {
-    //     console.log(id)
-    //     try {
-    //         const favShow = await fetch(`http://localhost:4000/api/v1/usersFavorites`, 
-    //         {
-    //         method: "POST"
-    //         })
-    //         console.log(favShow)
-    //     } catch (error) {
-    //         console.error(error.message)
-    //     }
-    // }
-
-    handleSubmit = (event) => {
-        // to prevent default form functionality
-        event.preventDefault()
-        usershow.create(this.state)
-            .then(data => {
-                // redirecting with react router
-                this.props.history.push('/favorites')
-            })
-    }
-
     return (
-        <div className="show-title" key={show.mal_id}>
-            <h1>{show.title}</h1>
-            <button>Add to Watchlist</button>
-            {/* <button onClick={() => favShow(show.mal_id)}>Add to Favorites</button> */}
-            <form onSubmit={this.handleSubmit} >
-                <input type="hidden" name="apiId" value="{show.mal_id}" />
-                <button>add to favs</button>
-            </form>
+        <div className="show-title">
+            <h1 className="title-h1">{show.title}</h1>
+            <button><a href='/watch-list'>Add to Watchlist</a></button>
+            <button><a href='/favorites'>Add to Favorites</a></button>
             <div className="show-image">
                 <img src={show.image_url} alt="" /><br /><br />
                 <div className="show-synopsis">

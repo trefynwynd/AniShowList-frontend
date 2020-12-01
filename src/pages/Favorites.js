@@ -23,7 +23,7 @@ class Favorites extends Component {
     render() {
         return (
             <div className="faves-div"> 
-                <h1>Favorites</h1><br/>
+                <h1 className="title-h1">Favorites</h1><br/>
             </div >
         )
     }
