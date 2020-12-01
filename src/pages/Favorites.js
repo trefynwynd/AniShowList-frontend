@@ -21,9 +21,15 @@ class Favorites extends Component {
 
     render() {
         return (
+          <>
+          <div>
+            <h2>Favorites</h2>
+          </div>
+          <p>This is where you can see the shows you have favourited.</p>
             <div className="faves-div"> 
                 <h1>{this.state.favorites}</h1><br/>
             </div >
+            </>
         )
     }
 }
