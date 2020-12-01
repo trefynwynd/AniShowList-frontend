@@ -22,11 +22,21 @@ class Favorites extends Component {
 
     render() {
         return (
+          <>
+          <div>
+            <h2>Favorites</h2>
+          </div>
+          <p>This is where you can see the shows you have favourited.</p>
             <div className="faves-div"> 
                 <h1 className="title-h1">Favorites</h1><br/>
             </div >
+            </>
         )
     }
 }
 
 export default Favorites
+
+// For all of the series that are fave'd, they would show here.
+// If there isn't any, it should post a statement saying "You do not have any anime that are favourited."
+// This is bascially gamelist.js but only for favourites.

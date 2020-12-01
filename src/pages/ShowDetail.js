@@ -20,11 +20,40 @@ const ShowDetail = () => {
         selectedShow()
     }, [id])
 
+    // const favShow = async id => {
+    //     console.log(id)
+    //     try {
+    //         const favShow = await fetch(`http://localhost:4000/api/v1/usersFavorites`, 
+    //         {
+    //         method: "POST"
+    //         })
+    //         console.log(favShow)
+    //     } catch (error) {
+    //         console.error(error.message)
+    //     }
+    // }
+
+    const handleSubmit = (event) => {
+        // to prevent default form functionality
+        event.preventDefault()
+        console.log(show.mal_id)
+        usershow.create(show.mal_id)
+            .then(data => {
+                // redirecting with react router
+                console.log(data)
+                // this.props.history.push('/favorites')
+            })
+    }
+
     return (
-        <div className="show-title">
-            <h1 className="title-h1">{show.title}</h1>
-            <button><a href='/watch-list'>Add to Watchlist</a></button>
-            <button><a href='/favorites'>Add to Favorites</a></button>
+        <div className="show-title" key={show.mal_id}>
+            <h1>{show.title}</h1>
+            <button>Add to Watchlist</button>
+            {/* <button onClick={() => favShow(show.mal_id)}>Add to Favorites</button> */}
+            <form onSubmit={handleSubmit} >
+                <input type="hidden" name="apiId" value="{show.mal_id}" />
+                <button>add to favs</button>
+            </form>
             <div className="show-image">
                 <img src={show.image_url} alt="" /><br /><br />
                 <div className="show-synopsis">

@@ -7,7 +7,7 @@ class WatchList extends Component {
     }
 
     callAPI() {
-        fetch("http://localhost:4000/watch-list")
+        fetch("http://localhost:4000/watchlist")
             .then(res => res.text())
             .then(res => this.setState({ watchList: res }))
             .catch(err => err);
@@ -19,9 +19,12 @@ class WatchList extends Component {
 
     render() {
         return (
+          <>
+          <h2>Watch List</h2>
             <div>
                 <h1 className='title-h1'>WatchList</h1>
             </div>
+          </>
         );
     }
 }
