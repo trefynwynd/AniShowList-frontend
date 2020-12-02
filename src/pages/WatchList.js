@@ -22,7 +22,7 @@ class WatchList extends Component {
           <>
           <h2>Watch List</h2>
             <div>
-                <h1>{this.state.watchList}</h1>
+                <h1 className='title-h1'>WatchList</h1>
             </div>
           </>
         );
