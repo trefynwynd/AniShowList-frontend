@@ -16,10 +16,11 @@ class userShow {
     return fetch(`${url}/show/${apiId}`).then(res => res.json())
   }
   // Add a Favorite
-  static create = (apiId) => {
+  static create = (apiId, image_url) => {
     const data = {
       apiId: apiId,
-      userId: localStorage.getItem('id')
+      userId: localStorage.getItem('id'),
+      image_url,
     }
         return fetch(`${url}/usersFavorites/`, {
             // options
