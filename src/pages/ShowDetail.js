@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-
+import userShow from '../models/usershow'
 const ShowDetail = () => {
 
     const { id } = useParams()
@@ -37,7 +37,7 @@ const ShowDetail = () => {
         // to prevent default form functionality
         event.preventDefault()
         console.log(show.mal_id)
-        usershow.create(show.mal_id)
+        userShow.create(show.mal_id, show.image_url)
             .then(data => {
                 // redirecting with react router
                 console.log(data)
@@ -51,8 +51,7 @@ const ShowDetail = () => {
             <button>Add to Watchlist</button>
             {/* <button onClick={() => favShow(show.mal_id)}>Add to Favorites</button> */}
             <form onSubmit={handleSubmit} >
-                <input type="hidden" name="apiId" value="{show.mal_id}" />
-                <button>add to favs</button>
+                <button>Add to Favs</button>
             </form>
             <div className="show-image">
                 <img src={show.image_url} alt="" /><br /><br />

@@ -3,9 +3,9 @@ const url = `http://localhost:4000/api/v1`
 
 class userShow {
   // accessed as GameModel.all()
-  static allFaves = () => {
+  static allFaves = (userId) => {
     // calling the index method in the API controller for favorites
-    return fetch(`${url}/usersFavorites`).then(res => res.json())
+    return fetch(`${url}/usersFavorites/${userId}`).then(res => res.json())
   }
   static allWatch = () => {
     // calling the index method in the API controller from watch list
@@ -16,10 +16,11 @@ class userShow {
     return fetch(`${url}/show/${apiId}`).then(res => res.json())
   }
   // Add a Favorite
-  static create = (apiId) => {
+  static create = (apiId, image_url) => {
     const data = {
       apiId: apiId,
-      userId: localStorage.getItem('id')
+      userId: localStorage.getItem('id'),
+      image_url,
     }
         return fetch(`${url}/usersFavorites/`, {
             // options

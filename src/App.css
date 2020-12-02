@@ -24,3 +24,10 @@ img {
   width: 350px;
   border-radius: 15px;
 }
+
+.fav-img {
+  height: 450px;
+  width: 350px;
+  border-radius: 25px;
+  padding: 25px;
+}
