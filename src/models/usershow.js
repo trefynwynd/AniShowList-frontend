@@ -35,10 +35,15 @@ class userShow {
 // Delete a Favourite
   static delete = (apiId) => {
     const userId = localStorage.getItem('id')
+    console.log(userId)
     return fetch(`${url}/usersFavorites/${userId}/${apiId}`, {
       method: "DELETE",
     }
-    ).then(res => res.json())
+    ).then(res => {
+      console.log(res)
+      return res.json()
+    })
+    .catch(console.error)
   }
 }
 export default userShow
