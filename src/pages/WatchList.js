@@ -1,33 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { useState, useEffect } from 'react'
+import userWatch from "../models/userWatch"
 
-class WatchList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { watchList: "" };
-    }
 
-    callAPI() {
-        fetch("http://localhost:4000/watchlist")
-            .then(res => res.text())
-            .then(res => this.setState({ watchList: res }))
-            .catch(err => err);
-    }
+const UserWatch = (props) => {
 
-    componentDidMount() {
-        this.callAPI();
-    }
+    const [watchShow, setWatchShow] = useState([]);
+    const [userId, setUserId] = useState(localStorage.getItem('id'))
 
-    render() {
-        return (
-          <>
-          <h2>Watch List</h2>
-            <div>
-                <h1 className='title-h1'>WatchList</h1>
-            </div>
-          </>
-        );
-    }
+    useEffect(() => {
+
+        const fetchData = async () => {
+            const results = await userWatch.allWatch(userId)
+            console.log(results)
+            // // const response = await axios(
+            //     `https://api.jikan.moe/v3/anime/${props.apiId}`
+            // );
+            // console.log(response)
+            setWatchShow(results);
+        }
+        fetchData()
+    }, [props])
+
+    return (
+        <div className="faves-div">
+            <h1 className="title-h1">Watching List</h1>
+            {watchShow.map((show, idx) => {
+                return <img src={show.image_url} alt="" className="fav-img" />
+            })}
+            {/* <button className="btn btn-danger">Edit</button> */}
+        </div >
+    )
 }
-
-export default WatchList;
-
+export default UserWatch
