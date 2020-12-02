@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import userShow from '../models/usershow';
 
@@ -9,25 +8,38 @@ const Favorites = (props) => {
     const [favShow, setFavShow] = useState([]);
     const [userId, setUserId] = useState(localStorage.getItem('id'))
 
-    useEffect(() => {
-        const fetchData = async () => {
+    const fetchData = async () => {
         const results = await userShow.allFaves(userId)
-            console.log(results)
-            // // const response = await axios(
-            //     `https://api.jikan.moe/v3/anime/${props.apiId}`
-            // );
-            // console.log(response)
-            setFavShow(results);
-        }
+        console.log(results)
+        // // const response = await axios(
+        //     `https://api.jikan.moe/v3/anime/${props.apiId}`
+        // );
+        // console.log(response)
+        setFavShow(results);
+    }
+
+    useEffect(() => {
         fetchData()
     }, [props])
+
+    const handleDestroy = (apiId) => {
+        userShow.delete(apiId)
+            .then(data => {
+                fetchData()
+            })
+    }
 
 
     return (
         <div className="faves-div">
             <h1 className="title-h1">Favorites</h1>
             {favShow.map((show, idx) => {
-                return <img src={show.image_url} alt="" className="fav-img"/>
+                return (
+                    <div>
+                        <img src={show.image_url} alt="" className="fav-img" /> <br />
+                        <button className="btn-danger" onClick={()=> handleDestroy(show.apiId)}>Delete</button>
+                    </div>
+                )
             })}
         </div >
     )
