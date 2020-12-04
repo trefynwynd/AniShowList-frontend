@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import userShow from '../models/usershow'
+import userWatch from '../models/userWatch'
+
 const ShowDetail = () => {
 
     const { id } = useParams()
@@ -45,10 +47,18 @@ const ShowDetail = () => {
             })
     }
 
+    const handleClick = (event) => {
+        console.log(show.mal_id)
+        userWatch.create(show.mal_id, show.image_url)
+            .then(data => {
+                console.log(data)
+            })
+    }
+
     return (
         <div className="show-title" key={show.mal_id}>
-            <h1>{show.title}</h1>
-            <button>Add to Watchlist</button>
+            <h1 className="title-h1">{show.title}</h1>
+            <button onClick={() => handleClick(show.mal_id)}>Add to Watchlist</button>
             {/* <button onClick={() => favShow(show.mal_id)}>Add to Favorites</button> */}
             <form onSubmit={handleSubmit} >
                 <button>Add to Favs</button>

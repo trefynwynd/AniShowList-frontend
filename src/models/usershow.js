@@ -7,14 +7,6 @@ class userShow {
     // calling the index method in the API controller for favorites
     return fetch(`${url}/usersFavorites/${userId}`).then(res => res.json())
   }
-  static allWatch = () => {
-    // calling the index method in the API controller from watch list
-    return fetch(`${url}/watchlist`).then(res => res.json())
-  }
-  // accessed as GameModel.show(someId)
-  static show = (apiId) => {
-    return fetch(`${url}/show/${apiId}`).then(res => res.json())
-  }
   // Add a Favorite
   static create = (apiId, image_url) => {
     const data = {
@@ -35,10 +27,15 @@ class userShow {
 // Delete a Favourite
   static delete = (apiId) => {
     const userId = localStorage.getItem('id')
+    console.log(userId)
     return fetch(`${url}/usersFavorites/${userId}/${apiId}`, {
       method: "DELETE",
     }
-    ).then(res => res.json())
+    ).then(res => {
+      console.log(res)
+      return res.json()
+    })
+    .catch(console.error)
   }
 }
 export default userShow
